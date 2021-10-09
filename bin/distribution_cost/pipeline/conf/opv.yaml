@@ -1,0 +1,134 @@
+HdfsFileRawPath: "hdfs:///user/brc03/vmeca/data/raw/"
+HdfsFileStandardPath: "hdfs:///user/brc03/vmecb/data/standard/opv/"
+HdfsFileRefinedPath: "hdfs:///user/brc03/vmecb/data/refined/smkt008_opv/"
+ColumnToRename:
+  FR:
+    old:
+      - 'Taxe parafiscale'
+      - 'CDC_NUMVIN'
+      - 'CRE_MARCA'
+    new:
+      - 'TAXE_PARAFISCALE'
+      - 'VIN'
+      - 'BRAND'
+  SP:
+    old:
+      - 'TOTAL_SERVICIOS'
+      - 'CDC_NUMVIN'
+      - 'NCL_CODOF'
+      - 'SUPLIDOS'
+      - 'CRE_MARCA'
+    new:
+      - 'CONTRAT_SERVICE'
+      - 'VIN'
+      - 'COD_OFR'
+      - 'FRAIS_ANEXXES'
+      - 'BRAND'
+ColumnToSelect:
+  FR:
+    - 'CDC_NUMVIN'
+    - 'COD_OFR'
+    - 'CRE_MARCA'
+    - 'NCL_CODCRE'
+    - 'DATE_COMANDE'
+    - 'FINITION'
+    - 'FIN_LFINITIONAO'
+    - 'ACC'
+    - 'ACC_PRE'
+    - 'NCL_VO_IMPAYUDAREC'
+    - 'FRAIS_ANEXXES'
+    - 'TOTAL_REMISE_PRE'
+    - 'TOTAL_REMISE'
+    - 'PRIX_FINAL'
+    - 'TARIF_VEHICULE_PRE'
+    - 'TARIF_VEHICULE'
+    - 'OPCIONES'
+    - 'OPCIONES_PRE'
+    - 'NCL_VO_PRIMACONVERSION'
+    - 'CONTRAT_SERVICE'
+    - 'BONUS_MALUS'
+    - 'NCL_VO_VALON'
+    - 'TRANSFORMATIONS_PRE'
+    - 'TRANSFORMATIONS'
+    - 'Taxe parafiscale'
+    - 'VEHICULE_REPENDRE_PRE'
+    - 'COUNTRY'
+  SP:
+    - 'CDC_NUMVIN'
+    - 'NCL_CODOF'
+    - 'CRE_MARCA'
+    - 'NCL_CODCRE'
+    - 'DATE_COMANDE'
+    - 'FINITION'
+    - 'FIN_LFINITIONAO'
+    - 'ACC'
+    - 'ACC_PRE'
+    - 'SUPLIDOS'
+    - 'TOTAL_REMISE_PRE'
+    - 'TOTAL_REMISE'
+    - 'PRIX_FINAL'
+    - 'TARIF_VEHICULE_PRE'
+    - 'TARIF_VEHICULE'
+    - 'OPCIONES'
+    - 'OPCIONES_PRE'
+    - 'TOTAL_SERVICIOS'
+    - 'NCL_VO_VALON'
+    - 'DEDUCCION_IMPUESTOS'
+    - 'COUNTRY'
+
+ColumnToCreate:
+  FR:
+    column:
+      - "DEDUCCION_IMPUESTOS"
+    type:
+      - "float"
+  SP:
+    column:
+      - "NCL_VO_IMPAYUDAREC"
+      - "NCL_VO_PRIMACONVERSION"
+      - "BONUS_MALUS"
+      - "TRANSFORMATIONS"
+      - "TRANSFORMATIONS_PRE"
+      - "VEHICULE_REPENDRE_PRE"
+      - "TAXE_PARAFISCALE"
+    type:
+      - "float"
+      - "float"
+      - "float"
+      - "float"
+      - "float"
+      - "float"
+      - "float"
+ColumnToSelectFinale:
+    - 'VIN'
+    - 'COD_OFR'
+    - 'BRAND'
+    - 'NCL_CODCRE'
+    - 'DATE_COMANDE'
+    - 'FINITION'
+    - 'FIN_LFINITIONAO'
+    - 'ACC'
+    - 'ACC_PRE'
+    - 'NCL_VO_IMPAYUDAREC'
+    - 'FRAIS_ANEXXES'
+    - 'TOTAL_REMISE_PRE'
+    - 'TOTAL_REMISE'
+    - 'PRIX_FINAL'
+    - 'TARIF_VEHICULE_PRE'
+    - 'TARIF_VEHICULE'
+    - 'OPCIONES'
+    - 'OPCIONES_PRE'
+    - 'NCL_VO_PRIMACONVERSION'
+    - 'CONTRAT_SERVICE'
+    - 'BONUS_MALUS'
+    - 'NCL_VO_VALON'
+    - 'TRANSFORMATIONS_PRE'
+    - 'TRANSFORMATIONS'
+    - 'TAXE_PARAFISCALE'
+    - 'VEHICULE_REPENDRE_PRE'
+    - 'DEDUCCION_IMPUESTOS'
+    - 'COUNTRY'
+dfTAX: "hdfs:///user/brc03/vmecb/data/standard/tax_rate/"
+ColumnToHash: 'VIN'
+OPV_table: 'SMKT008_OPV_PKG'
+

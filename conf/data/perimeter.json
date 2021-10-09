@@ -1,0 +1,8 @@
+{
+  "vehicles": {
+    "sites": ["PY", "MU"],
+    "start_date": "15/01/20",
+    "end_date": "17/01/20",
+    "genr_door": "EMON"
+  }
+}

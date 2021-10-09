@@ -1,0 +1,18 @@
+HdfsFileRawPath: "hdfs:///user/brc03/vmeca/data/raw/Sort_Client_Promotions.csv"
+HdfsFileStandardPath: "hdfs:///user/brc03/vmecb/data/standard/sort_client_promotions/"
+HdfsFileRefinedPath: "hdfs:///user/brc03/vmecb/data/refined/smkt017_srt_cp/"
+
+ColumnToRename:
+  old:
+    - 'Client promotions'
+    - 'Order'
+  new:
+    - 'LIB_CAT'
+    - 'ORDER'
+
+ColumnToSelect:
+    - 'Client promotions'
+    - 'Order'
+
+SORT_CLIENT_PROMOTIONS_table: 'SMKT017_SRT_CP_PKG'
+

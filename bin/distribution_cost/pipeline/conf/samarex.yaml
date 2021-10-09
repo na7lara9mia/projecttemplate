@@ -1,0 +1,71 @@
+HdfsFileRawPath: "hdfs:///user/brc03/vmeca/data/raw/"
+HdfsFileStandardPath: "hdfs:///user/brc03/vmecb/data/standard/samarex/"
+HdfsFileRefinedPath: "hdfs:///user/brc03/vmecb/data/refined/smkt015_smr_rex/"
+
+ColumnToSelect:
+  - 'MARQUE_DE_DISTRIBUTION'
+  - 'CYCLE'
+  - 'LIBELLE_ZDS'
+  - 'MOIS_DE_LIVRAISON'
+  - 'LIBELLE_SOUS-FAMILLE_SAMARA'
+  - 'LIBELLE_TYPE_DE_CLIENTELE_MAJEUR'
+  - "LIBELLE_TYPE_D'ENERGIE"
+  - 'VOLUME_AJ'
+  - 'PRIX_VENTE_AJ'
+  - 'PRIX_VENTE_AJ_DEV'
+  - 'MACOM_CONSO_AJ'
+  - 'PV_VERSION'
+  - 'PV_OPTIONS'
+  - 'MACOM_CONSO_OPTION'
+  - 'MCX_VARIABLES_AJ'
+  - 'RM035'
+  - 'RM036'
+  - 'RM037'
+  - 'RM039'
+  - 'RM280'
+  - 'RBCV_AJ'
+  - 'LIBELLE_PAYS'
+  - 'Channel'
+  - 'Marque'
+  - 'Finition_Commerce'
+  - 'List_price_u'
+  
+ColumnToRename:
+  old:
+    - 'MARQUE_DE_DISTRIBUTION'
+    - 'LIBELLE_ZDS'
+    - 'Finition_Commerce'
+    - 'Marque'
+    - 'LIBELLE_SOUS-FAMILLE_SAMARA'
+    - 'LIBELLE_TYPE_DE_CLIENTELE_MAJEUR'
+    - 'LIBELLE_PAYS'
+    - "LIBELLE_TYPE_D'ENERGIE"
+    - 'MOIS_DE_LIVRAISON'
+    - 'List_price_u'
+    - 'Channel'
+  new:
+    - 'BRAND'
+    - 'LIB_ZDS'
+    - 'FINITION'
+    - 'LIB_BRAND'
+    - 'LIB_SFA'
+    - 'CMA'
+    - 'COUNTRY'
+    - 'ENERGY'
+    - 'MONTH'
+    - 'LIST_PRICE_U'
+    - 'CHANNEL'
+dfCHAN: "hdfs:///user/brc03/vmecb/data/standard/channel_type/"
+mapping_ctry:
+    FRANCE: 'France'
+    BELGIQUE: 'Belgium'
+    ITALIE: 'Italy'
+    ESPAGNE: 'Spain'
+    UNITED KINGDOM: 'Great Britain'
+    ALLEMAGNE: 'Germany'
+    POLOGNE: 'Poland'
+    AUTRICHE: 'Austria'
+    PAYS BAS: 'Netherlands'
+    PORTUGAL: 'Portugal'
+
+SAMAREX_table: 'SMKT015_SMR_REX_PKG'

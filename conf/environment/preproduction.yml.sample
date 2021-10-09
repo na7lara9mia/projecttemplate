@@ -1,0 +1,19 @@
+brcdb:
+  short_name: brc
+  host: pyox2k01
+  service_name: BRC00_PP2
+  username: BRCXX_XXX
+  password: xxxxxxxx
+  port: 1521
+
+aws:
+  aws_access_key_id: xxxxx
+  aws_secret_access_key: xxxxxxx
+  endpoint_url: http://s3.inetpsa.com:9020
+
+mailing:
+  host: smtp-auth.mpsa.com
+  sender: forename.name@mpsa.com
+  receivers: [forename1.name1@mpsa.com, forename2.name2@mpsa.com]
+  username: uxxxxxx
+  password: xxxxxxxxx  # RPI password

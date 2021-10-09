@@ -1,0 +1,180 @@
+hdfsFileSourcePath: "hdfs:///user/brc10/data/standardized/"
+hdfsFileRawPath: "hdfs:///user/brc03/vmecb/data/raw/samara_source_copy/"
+hdfsFileStandardPath: "hdfs:///user/brc03/vmecb/data/standard/samara/"
+tables:
+  - sinc0/sinqtvin
+  - sinc0/sinqtcli
+  - sinc0/sinqtver
+  - sinc0/sinqtfv4
+  - sinc0/sinqtcmp
+  - sinc0/sinqtcnd
+  - sinc0/sinqtseg
+  - sinc0/sinqtzds
+  - sinc0/sinqtsfa
+  - sinc0/sinqtfam
+  - sinc0/sinqtrub
+  - sinc0/sinqtopc
+  - sinc0/sinqtcma
+  - sinc0/sinqtcmi
+  - sinc0/sinqtcyr
+  - sinc0/sinqtmrq
+  - sinc0/sinqtbas
+
+vin: "sinqtvin/"
+cli: "sinqtcli/"
+ver: "sinqtver/"
+fv4: "sinqtfv4/"
+cmp: "sinqtcmp/"
+cnd: "sinqtcnd/"
+seg: "sinqtseg/"
+zds: "sinqtzds/"
+sfa: "sinqtsfa/"
+fam: "sinqtfam/"
+rub: "sinqtrub/"
+opc: "sinqtopc/"
+cma: "sinqtcma/"
+cmi: "sinqtcmi/"
+cyr: "sinqtcyr/"
+mrq: "sinqtmrq/"
+bas: "sinqtbas/"
+samaraSQLPath: "../sql/samara.sql"
+samaraSQLPathP: "../sql/samara_parametrized.sql"
+ColumnToRename:
+  old:
+  - 'SINQTVIN__CODE'
+  - 'SINQTCLI_2__CODE'
+  - 'SINQTVER__CODE'
+  - 'SINQTVER__LIB'
+  - 'SINQTCMP__CODE'
+  - 'SINQTCMP__LIB'
+  - 'SINQTCND__CODE'
+  - 'SINQTCND__LIB'
+  - 'SINQTCLI__CODE'
+  - 'SINQTCLI__LIB'
+  - 'SINQTSEG__CODE'
+  - 'SINQTSEG__LIB'
+  - 'SINQTZDS__LIB'
+  - 'SINQTSFA__CODE'
+  - 'SINQTSFA__LIB'
+  - 'SINQTFAM__CODE'
+  - 'SINQTFAM__LIB'
+  - 'SINQTCMA__CODE'
+  - 'SINQTCMA__LIB'
+  - 'SINQTCMI__CODE'
+  - 'SINQTCMI__LIB'
+  - "SINQTOPC_LIB"
+  - "SINQTRUB__CODE"
+  - "SINQTRUB__LIB"
+  - "SINQTOPC__CODE"
+  - 'SINQTMRQ_2__CODE'
+  - 'sum(PRIX_VENTE_AJ)'
+  - 'sum(PV_OPTIONS)'
+  - 'sum(PV_VERSION)'
+  - 'sum(RBCV_AJ)'
+  - 'sum(MACOM_CONSO_AJ)'
+  - 'sum(MACOM_CONSO_OPTION)'
+  - 'sum(MACOM_ENTITE_VERSION)'
+  - 'sum(VOLUME_AJ)'
+  - 'SINQTZDS__CODE'
+  - 'DT_COMM_CLI_FIN_VD'
+  new:
+  - 'VIN'
+  - 'CODE_CLI_2'
+  - 'CODE_VER'
+  - 'LIB_VER'
+  - 'CODE_CMP'
+  - 'LIB_CMP'
+  - 'CODE_CND'
+  - 'LIB_CND'
+  - 'CODE_CLI'
+  - 'LIB_CLI'
+  - 'CODE_SEG'
+  - 'LIB_SEG'
+  - 'LIB_ZDS'
+  - 'CODE_SFA'
+  - 'LIB_SFA'
+  - 'CODE_FAM'
+  - 'LIB_FAM'
+  - 'CODE_CMA'
+  - 'LIB_CMA'
+  - 'CODE_CMI'
+  - 'LIB_CMI'
+  - "LIB_OPC"
+  - "CODE_RUB"
+  - "LIB_RUB"
+  - "CODE_OPC"
+  - 'BRAND'
+  - 'PRIX_VENTE_AJ'
+  - 'PV_OPTIONS'
+  - 'PV_VERSION'
+  - 'RBCV_AJ'
+  - 'MACOM_CONSO_AJ'
+  - 'MACOM_CONSO_OPTION'
+  - 'MACOM_ENTITE_VERSION'
+  - 'VOLUME_AJ'
+  - 'COUNTRY'
+  - 'DATE_COMMANDE'
+ColumnToSelect:
+  - 'VIN'
+  - 'CODE_CLI_2'
+  - 'CODE_VER'
+  - 'LIB_VER'
+  - 'DT_FACT'
+  - 'DT_VD'
+  - 'DATE_COMMANDE'
+  - 'DATIMM'
+  - 'CODE_CMP'
+  - 'LIB_CMP'
+  - 'CODE_CND'
+  - 'LIB_CND'
+  - 'CODE_CLI'
+  - 'LIB_CLI'
+  - 'CODE_SEG'
+  - 'LIB_SEG'
+  - 'LIB_ZDS'
+  - 'CODE_SFA'
+  - 'LIB_SFA'
+  - 'CODE_FAM'
+  - 'LIB_FAM'
+  - 'CODE_CMA'
+  - 'LIB_CMA'
+  - 'CODE_CMI'
+  - 'LIB_CMI'
+  - 'TYPE_FLOTTE_VD'
+  - 'TYPE_OPE_ESSOR'
+  - 'TYP_UTIL_VD'
+  - 'CODE_PROFESSION_VD'
+  - 'CODE_PROMO'
+  - 'CODE_PROMO2'
+  - 'BRAND'
+  - 'PRIX_VENTE_AJ'
+  - 'PV_VERSION'
+  - 'MACOM_CONSO_AJ'
+  - 'MACOM_CONSO_OPTION'
+  - 'MACOM_ENTITE_VERSION'
+  - 'VOLUME_AJ'
+  - 'RBCV_AJ'
+  - 'CANAL_TYPE'
+  - 'FIX_MARGIN'
+  - 'PV_OPTIONS'
+  - 'CT_STOCKAGE'
+  - 'COUNTRY'
+  - 'year'
+  - 'month'
+  - 'day'
+
+
+ColumnToSelectSUM:
+  - 'VIN'
+  - 'PRIX_VENTE_AJ'
+  - 'PV_VERSION'
+  - 'MACOM_CONSO_AJ'
+  - 'MACOM_CONSO_OPTION'
+  - 'MACOM_ENTITE_VERSION'
+  - 'RBCV_AJ'
+  - 'PV_OPTIONS'
+  - 'COUNTRY'
+dfCHAN: "hdfs:///user/brc03/vmecb/data/standard/channel_type/"
+dfFAM: "hdfs:///user/brc03/vmecb/data/standard/family/"
+dfDirectSales: "hdfs:///user/brc03/vmecb/data/standard/ventes_directes_indirectes/"
+dfMarges: "hdfs:///user/brc03/vmecb/data/standard/Table_ref_marges/"

@@ -1,0 +1,16 @@
+HdfsFileRawPath: "hdfs:///user/brc03/vmeca/data/raw/Classification_VME_Category.csv"
+#hdfsFileSourcePath: "hdfs:///user/brc03/vmeca/data/raw/Classification_VME_Category.csv"
+HdfsFileCopyHistoricalPath: "hdfs:///user/brc03/vmeca/data/raw/historical/"
+HdfsFileStandardPath: "hdfs:///user/brc03/vmecb/data/standard/Classification_VME_Category/"
+HdfsFileRefinedPath: "/user/brc03/vmecb/data/refined/smkt005_ref_promo"
+ColumnToRename:
+    old:
+      - 'VME Category'
+      - 'Classification'
+    new:
+      - 'VME_CAT'
+      - 'LIB_CLASS'
+
+ColumnToSelect:
+    - 'VME Category'
+    - 'Classification'

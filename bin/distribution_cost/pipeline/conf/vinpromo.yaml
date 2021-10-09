@@ -1,0 +1,15 @@
+hdfsFileRefinedPath: "hdfs:///user/brc03/vmecb/data/refined/smkt007_vinpromo/"
+VINPROMO_table: 'SMKT007_VINPROMO_PKG'
+ColumnToSelect:
+  - "VIN"
+  - "COUNTRY"
+  - "BRAND"
+  - "LIB_OPC"
+  - "CODE_RUB"
+  - "LIB_RUB"
+  - "CODE_OPC"
+  - "MCX_VARIABLES"
+  - "year"
+  - "month"
+
+

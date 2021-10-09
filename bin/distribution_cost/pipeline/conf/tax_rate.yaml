@@ -1,0 +1,17 @@
+HdfsFileRawPath: "hdfs:///user/brc03/vmeca/data/raw/tax_rate.csv"
+HdfsFileStandardPath: "hdfs:///user/brc03/vmecb/data/standard/tax_rate/"
+HdfsFileRefinedPath: "hdfs:///user/brc03/vmecb/data/standard/smkt001_ref_tax/"
+
+ColumnToRename:
+  old:
+    - 'country'
+    - 'taxrate'
+  new:
+    - 'COUNTRY'
+    - 'TAX_RATE'
+
+ColumnToSelect:
+    - 'country'
+    - 'taxrate'
+
+TAX_RATE_table: 'SMKT001_REF_TAX_PKG'

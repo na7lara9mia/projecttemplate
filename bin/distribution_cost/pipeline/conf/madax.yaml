@@ -1,0 +1,38 @@
+hdfsFileSourcePath: "hdfs:///user/brc06/data/standardized/"
+hdfsFileRawPath: "hdfs:///user/brc03/vmecb/data/raw/madax_source_copy/"
+hdfsFileStandardPath: "hdfs:///user/brc03/vmecb/data/standard/madax/"
+tables:
+  - bds00/rbvqtcdc
+  - bar00/rbvqttxm_arc
+  - bds00/rbvqtfll
+  - bds00/rbvqttff
+  - bds00/rbvqtlm1
+  - bds00/rbvqtveh
+  - bds00/rbvqttut
+  - bds00/rbvqtcco
+  - bds00/rbvqtcaf
+  - bds00/rbvqtm10
+  - bds00/rbvqtctp
+  - bds00/rbvqtfam
+
+cdc: "rbvqtcdc/"
+txm_arc: "rbvqttxm_arc/"
+fll: "rbvqtfll/"
+tff: "rbvqttff/"
+lm1: "rbvqtlm1/"
+veh: "rbvqtveh/"
+tut: "rbvqttut/"
+cco: "rbvqtcco/"
+caf: "rbvqtcaf/"
+m10: "rbvqtm10/"
+ctp: "rbvqtctp/"
+fam: "rbvqtfam/"
+madaxSQLPath: "../sql/madax.sql"
+madaxSQLPathP: "../sql/madax_parametrized.sql"
+ColumnToRename:
+  old:
+    - 'NOVIN'
+    - 'MARQUE'
+  new:
+    - 'VIN'
+    - 'BRAND'

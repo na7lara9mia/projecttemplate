@@ -1,0 +1,17 @@
+
+hdfsFileSourcePath:
+  - "hdfs:///user/brc03/vmeca/data/raw/Table_ref_marges.csv"
+HdfsFileCopyHistoricalPath: "hdfs:///user/brc03/vmeca/data/raw/historical/"
+HdfsFileStandardPath: "hdfs:///user/brc03/vmecb/data/standard/Table_ref_marges/"
+HdfsFileRawPath: "hdfs:///user/brc03/vmecb/data/raw/Table_ref_marges"
+ColumnToRename:
+    old:
+      - 'Key Margin'
+      - 'Marge_u'
+    new:
+      - 'KEY_MARGIN'
+      - 'MARGE_U'
+
+ColumnToSelect:
+    - 'Key Margin'
+    - 'Marge_u'

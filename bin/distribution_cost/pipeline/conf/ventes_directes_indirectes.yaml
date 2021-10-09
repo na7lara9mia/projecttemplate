@@ -1,0 +1,16 @@
+hdfsFileSourcePath: "hdfs:///user/brc03/vmeca/data/raw/ventes_directes_indirectes.csv"
+HdfsFileCopyHistoricalPath: "hdfs:///user/brc03/vmeca/data/raw/historical/"
+HdfsFileStandardPath: "hdfs:///user/brc03/vmecb/data/standard/ventes_directes_indirectes/"
+HdfsFileRawPath: "hdfs:///user/brc03/vmecb/data/raw/ventes_directes_indirectes.csv"
+ColumnToRename:
+    old:
+      - 'cleCANAL (code pays - marque - canal de distribution - type clientèle majeure - type clientèle mineure)'
+      - 'CanalType'
+    new:
+      - 'KEY_CANAL'
+      - 'TYPE_CANAL'
+
+ColumnToSelect:
+    - 'cleCANAL (code pays - marque - canal de distribution - type clientèle majeure - type clientèle mineure)'
+    - 'CanalType'
+

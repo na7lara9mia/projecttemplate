@@ -1,0 +1,25 @@
+HdfsFileRawPath: "hdfs:///user/brc03/vmeca/data/raw/Channel_type.csv"
+HdfsFileStandardPath: "hdfs:///user/brc03/vmecb/data/standard/channel_type/"
+HdfsFileRefinedPath: "hdfs:///user/brc03/vmecb/data/refined/smkt016_ref_chan/"
+ColumnToRename:
+  old:
+    - 'channel'
+    - 'samarex_lib'
+    - 'samara_lib'
+    - 'goal_lib'
+  new:
+    - 'LIB_CHAN'
+    - 'LIB_SAMAREX'
+    - 'LIB_SAMARA'
+    - 'LIB_GOAL'
+ColumnToMapSamara: 'LIB_SAMARA'
+ColumnToMapSamarex: 'LIB_SAMAREX'
+ColumnToMapGoal: 'LIB_GOAL'
+ColumnChannel: 'LIB_CHAN'
+ColumnToSelect:
+  - "channel"
+  - 'samarex_lib'
+  - 'samara_lib'
+  - 'goal_lib'
+
+CHANNEL_TYPE_table: 'SMKT016_REF_CHAN_PKG'

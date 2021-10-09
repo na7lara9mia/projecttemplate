@@ -1,0 +1,23 @@
+HdfsFileRawPath: "hdfs:///user/brc03/vmeca/data/raw/Family.csv"
+HdfsFileStandardPath: "hdfs:///user/brc03/vmecb/data/standard/family/"
+HdfsFileRefinedPath: "hdfs:///user/brc03/vmecb/data/refined/smkt011_ref_fam/"
+
+ColumnToRename:
+  old:
+    - 'family'
+    - 'Brand'
+    - 'familytomap'
+  new:
+    - 'LIB_FAM'
+    - 'BRAND'
+    - 'FAM_TO_MAP'
+
+ColumnToSelect:
+    - 'family'
+    - 'Brand'
+    - 'familytomap'
+
+ColumnToDrop: 'FAM_TO_MAP'
+ColumnToMap: 'FAM_TO_MAP'
+ColumnFamily: 'LIB_FAM'
+FAMILY_table: 'SMKT011_REF_FAM_PKG'

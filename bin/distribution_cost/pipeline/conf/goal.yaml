@@ -1,0 +1,111 @@
+HdfsFileRawPath: "hdfs:///user/brc03/vmeca/data/raw/Goal_New.csv"
+HdfsFileStandardPath: "hdfs:///user/brc03/vmecb/data/standard/goal/"
+HdfsFileRefinedPath: "hdfs:///user/brc03/vmecb/data/refined/smkt010_goal/"
+
+ColumnToRename:
+  old:
+    - 'Marque'
+    - 'LIB PAYS'
+    - 'mois'
+    - 'TYPE'
+    - 'LIB SS FAM 2'
+    - 'ENERGIE'
+    - 'canal AE'
+    - 'volume'
+    - 'PVR unit'
+    - 'MCV unit'
+    - 'RBCV unit'
+    - 'Prime performance unit'
+    - 'Promo client final unit'
+    - "Aides société unit"
+    - 'Prime diff unit'
+    - 'Buy back unit'
+    - 'taux MCV RC130'
+    - 'Date'
+    - 'Year'
+  new:
+    - 'BRAND'
+    - 'COUNTRY'
+    - 'MONTH'
+    - 'PCCV'
+    - 'LIB_FAM'
+    - 'ENERGY'
+    - 'CHANNEL'
+    - 'VOLUME'
+    - 'PVR_UNIT'
+    - 'MCV_UNIT'
+    - 'RBCV_UNIT'
+    - 'PP_UNIT'
+    - 'PCF_UNIT'
+    - 'AS_UNIT'
+    - 'PD_UNIT'
+    - 'BB_UNIT'
+    - 'TX_MCV_RC130'
+    - 'DATE'
+    - 'YEAR'
+
+ColumnToSelect:
+  - "Marque"
+  - "LIB PAYS"
+  - "mois"
+  - "TYPE"
+  - "LIB SS FAM 2"
+  - "ENERGIE"
+  - "canal AE"
+  - "volume"
+  - "PVR unit"
+  - "MCV unit"
+  - "RBCV unit"
+  - "Prime performance unit"
+  - "Promo client final unit"
+  - "Aides société unit"
+  - "Prime diff unit"
+  - "Buy back unit"
+  - "taux MCV RC130"
+  - "PVR"
+  - "MCV"
+  - "RBCV"
+  - "RM035"
+  - "RM036"
+  - "RM037"
+  - "RM039"
+  - "RM280"
+  - "Year"
+  - "Date"
+dfFAM: "hdfs:///user/brc03/vmecb/data/standard/family/"
+dfCHAN: "hdfs:///user/brc03/vmecb/data/standard/channel_type/"
+mapping_ctry:
+    FRANCE: 'France'
+    BELGIQUE: 'Belgium'
+    ITALIE: 'Italy'
+    ESPAGNE: 'Spain'
+    ALLEMAGNE: 'Germany'
+    POLOGNE: 'Poland'
+    AUTRICHE: 'Austria'
+    PAYS BAS: 'Netherlands'
+    PORTUGAL: 'Portugal'
+mapping_brd:
+    CITROEN: 'AC'
+    PEUGEOT: 'AP'
+    DS: 'DS'
+amountsToCast:
+  - 'VOLUME'
+  - 'PVR_UNIT'
+  - 'MCV_UNIT'
+  - 'RBCV_UNIT'
+  - 'PP_UNIT'
+  - 'PCF_UNIT'
+  - 'AS_UNIT'
+  - 'PD_UNIT'
+  - 'BB_UNIT'
+  - 'TX_MCV_RC130'
+  - "PVR"
+  - "MCV"
+  - "RBCV"
+  - "RM035"
+  - "RM036"
+  - "RM037"
+  - "RM039"
+  - "RM280"
+
+GOAL_table: 'SMKT010_GOAL_PKG'

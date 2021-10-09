@@ -1,0 +1,262 @@
+SELECT
+    SINQTVIN.CODE SINQTVIN__CODE,
+    SINQTCLI_2.CODE SINQTCLI_2__CODE,
+    SINQTVER.CODE SINQTVER__CODE,
+    SINQTZDS.CODE SINQTZDS__CODE,
+    case 'fr_FR'
+when 'en_GB' then nvl(SINQTVER.LIB_EN,SINQTVER.LIB_FR)
+when 'fr_FR' then SINQTVER.LIB_FR
+when 'es_SP' then nvl(SINQTVER.LIB_ES,SINQTVER.LIB_FR)
+else SINQTVER.LIB_FR
+
+end SINQTVER__LIB,
+    Table__54.DT_FACT,
+    Table__54.DT_VD,
+    Table__54.DT_COMM_CLI_FIN_VD,
+    Table__54.DATIMM,
+    SINQTCMP.CODE SINQTCMP__CODE,
+    case 'fr_FR'
+when 'en_GB' then nvl(SINQTCMP.LIB_EN,SINQTCMP.LIB_FR)
+when 'fr_FR' then SINQTCMP.LIB_FR
+when 'es_SP' then nvl(SINQTCMP.LIB_ES,SINQTCMP.LIB_FR)
+else SINQTCMP.LIB_FR
+
+end SINQTCMP__LIB,
+    SINQTCND.CODE SINQTCND__CODE,
+    case 'fr_FR'
+when 'en_GB' then nvl(SINQTCND.LIB_EN,SINQTCND.LIB_FR)
+when 'fr_FR' then SINQTCND.LIB_FR
+when 'es_SP' then nvl(SINQTCND.LIB_ES,SINQTCND.LIB_FR)
+else SINQTCND.LIB_FR
+
+end SINQTCND__LIB,
+    SINQTCLI.CODE SINQTCLI__CODE,
+    case 'fr_FR'
+when 'en_GB' then nvl(SINQTCLI.LIB_EN,SINQTCLI.LIB_FR)
+when 'fr_FR' then SINQTCLI.LIB_FR
+when 'es_SP' then nvl(SINQTCLI.LIB_ES,SINQTCLI.LIB_FR)
+else SINQTCLI.LIB_FR
+
+end SINQTCLI__LIB,
+    SINQTSEG.CODE SINQTSEG__CODE,
+    case 'fr_FR'
+when 'en_GB' then nvl(SINQTSEG.LIB_EN,SINQTSEG.LIB_FR)
+when 'fr_FR' then SINQTSEG.LIB_FR
+when 'es_SP' then nvl(SINQTSEG.LIB_ES,SINQTSEG.LIB_FR)
+else SINQTSEG.LIB_FR
+
+end SINQTSEG__LIB,
+    case 'fr_FR'
+when 'en_GB' then nvl(SINQTZDS.LIB_EN,SINQTZDS.LIB_FR)
+when 'fr_FR' then SINQTZDS.LIB_FR
+when 'es_SP' then nvl(SINQTZDS.LIB_ES,SINQTZDS.LIB_FR)
+else SINQTZDS.LIB_FR
+
+end SINQTZDS__LIB,
+    SINQTSFA.CODE SINQTSFA__CODE,
+    case 'fr_FR'
+when 'en_GB' then nvl(SINQTSFA.LIB_EN,SINQTSFA.LIB_FR)
+when 'fr_FR' then SINQTSFA.LIB_FR
+when 'es_SP' then nvl(SINQTSFA.LIB_ES,SINQTSFA.LIB_FR)
+else SINQTSFA.LIB_FR
+
+end SINQTSFA__LIB,
+    SINQTFAM.CODE SINQTFAM__CODE,
+    case 'fr_FR'
+when 'en_GB' then nvl(SINQTFAM.LIB_EN,SINQTFAM.LIB_FR)
+when 'fr_FR' then SINQTFAM.LIB_FR
+when 'es_SP' then nvl(SINQTFAM.LIB_ES,SINQTFAM.LIB_FR)
+else SINQTFAM.LIB_FR
+
+end SINQTFAM__LIB,
+    SINQTRUB.CODE SINQTRUB__CODE,
+    case 'fr_FR'
+when 'en_GB' then SINQTRUB.LIB_EN
+when 'fr_FR' then SINQTRUB.LIB_FR
+when 'es_SP' then SINQTRUB.LIB_ES
+else SINQTRUB.LIB_FR
+
+end SINQTRUB__LIB,
+    SINQTOPC.CODE SINQTOPC__CODE,
+    case 'fr_FR'
+when 'en_GB' then SINQTOPC.LIB_EN
+when 'fr_FR' then SINQTOPC.LIB_FR
+when 'es_SP' then SINQTOPC.LIB_ES
+else SINQTOPC.LIB_FR
+
+end SINQTOPC_LIB,
+    SINQTCMA.CODE SINQTCMA__CODE,
+    case 'fr_FR'
+when 'en_GB' then nvl(SINQTCMA.LIB_EN,SINQTCMA.LIB_FR)
+when 'fr_FR' then SINQTCMA.LIB_FR
+when 'es_SP' then nvl(SINQTCMA.LIB_ES,SINQTCMA.LIB_FR)
+else SINQTCMA.LIB_FR
+
+end SINQTCMA__LIB,
+    SINQTCMI.CODE SINQTCMI__CODE,
+    case 'fr_FR'
+when 'en_GB' then nvl(SINQTCMI.LIB_EN,SINQTCMI.LIB_FR)
+when 'fr_FR' then SINQTCMI.LIB_FR
+when 'es_SP' then nvl(SINQTCMI.LIB_ES,SINQTCMI.LIB_FR)
+else SINQTCMI.LIB_FR
+
+end SINQTCMI__LIB,
+    Table__54.TYPE_FLOTTE_VD,
+    Table__54.TYPE_OPE_ESSOR,
+    Table__54.TYP_UTIL_VD,
+    Table__54.CODE_PROFESSION_VD,
+    Table__54.CODE_PROMO,
+    Table__54.CODE_PROMO2,
+    sum(Table__54.VOLUME_AJ) VOLUME_AJ,
+    sum(Table__54.PRIX_VENTE) PRIX_VENTE,
+    sum(Table__54.PRIX_VENTE_AJ) PRIX_VENTE_AJ,
+    sum(Table__54.PV_OPTIONS) PV_OPTIONS,
+    sum(Table__54.PV_VERSION) PV_VERSION,
+    sum(Table__54.MACOM_CONSO) MACOM_CONSO,
+    sum(Table__54.MACOM_CONSO_AJ) MACOM_CONSO_AJ,
+    sum(Table__54.MACOM_CONSO_VERSION) MACOM_CONSO_VERSION,
+    sum(Table__54.MACOM_CONSO_OPTION) MACOM_CONSO_OPTION,
+    sum(Table__54.MACOM_ENTITE) MACOM_ENTITE,
+    sum(Table__54.MACOM_ENTITE_AJ) MACOM_ENTITE_AJ,
+    sum(Table__54.MACOM_ENTITE_VERSION) MACOM_ENTITE_VERSION,
+    sum(Table__54.MACOM_ENTITE_OPTION) MACOM_ENTITE_OPTION,
+    sum(Table__54.RBCV_AJ) RBCV_AJ,
+    sum(Table__54.MCX_VARIABLES) MCX_VARIABLES,
+    SINQTMRQ_2.CODE SINQTMRQ_2__CODE,
+    sum(Table__54.CT_STOCKAGE) CT_STOCKAGE
+
+FROM
+    df_sinqtfv4 TABLE__54,
+    df_sinqtfam SINQTFAM_2
+
+JOIN df_sinqtcmp SINQTCMP ON Table__54.ID_ZDS=SINQTCMP.ID_ZDS and Table__54.ID_CMP=SINQTCMP.ID
+JOIN df_sinqtcli SINQTCLI ON Table__54.ID_ZDS=SINQTCLI.ID_ZDS and Table__54.ID_SCD=SINQTCLI.ID_SCD and Table__54.ID_CLI=SINQTCLI.ID
+JOIN df_sinqtcmi SINQTCMI ON Table__54.ID_ZDS=SINQTCMI.ID_ZDS and Table__54.ID_CMI=SINQTCMI.ID
+JOIN df_sinqtbas SINQTBAS ON Table__54.ID_BAS=SINQTBAS.ID
+JOIN df_sinqtzds SINQTZDS ON Table__54.ID_ZDS=SINQTZDS.ID
+LEFT OUTER JOIN df_sinqtrub SINQTRUB ON Table__54.ID_RUB=SINQTRUB.ID
+JOIN df_sinqtfam SINQTFAM ON Table__54.ID_ZDS=SINQTFAM.ID_ZDS and Table__54.ID_FAM=SINQTFAM.ID
+JOIN df_sinqtsfa SINQTSFA ON Table__54.ID_ZDS=SINQTSFA.ID_ZDS and Table__54.ID_SFA=SINQTSFA.ID
+JOIN df_sinqtver SINQTVER ON Table__54.ID_ZDS=SINQTVER.ID_ZDS and Table__54.ID_VER=SINQTVER.ID
+LEFT OUTER JOIN df_sinqtseg SINQTSEG ON Table__54.ID_ZDS=SINQTSEG.ID_ZDS and Table__54.ID_SEG=SINQTSEG.ID
+JOIN df_sinqtcnd SINQTCND ON Table__54.ID_CND=SINQTCND.ID
+JOIN df_sinqtcma SINQTCMA ON Table__54.ID_CMA=SINQTCMA.ID
+LEFT OUTER JOIN df_sinqtopc SINQTOPC ON Table__54.ID_ZDS=SINQTOPC.ID_ZDS and Table__54.ID_OPC=SINQTOPC.ID
+JOIN df_sinqtvin SINQTVIN ON Table__54.ID_ZDS=SINQTVIN.ID_ZDS and Table__54.ID_VIN=SINQTVIN.ID
+JOIN df_sinqtcli SINQTCLI_2 ON Table__54.ID_ZDS=SINQTCLI_2.ID_ZDS and Table__54.ID_SCD=SINQTCLI_2.ID_SCD and Table__54.ID_CLI_LIV=SINQTCLI_2.ID
+JOIN df_sinqtmrq SINQTMRQ_2 ON SINQTFAM_2.ID_MRQ_COM=SINQTMRQ_2.ID and Table__54.ID_ZDS=SINQTFAM_2.ID_ZDS and Table__54.ID_FAM=SINQTFAM_2.ID
+
+WHERE   ( Table__54.DT_VD BETWEEN TO_DATE('{0}', 'dd/MM/yyyy') AND TO_DATE('{1}', 'dd/MM/yyyy'))
+    AND ( SINQTBAS.CODE  =  'LA' AND (SINQTZDS.CODE = '{3}{2}' OR SINQTZDS.CODE IN ('PP{3}{2}', 'CP{3}{2}')) AND ( SINQTBAS.CODE != 'EA'  ))
+GROUP BY
+  SINQTVIN.CODE,
+  SINQTCLI_2.CODE,
+  SINQTZDS__CODE,
+  SINQTVER.CODE,
+  case 'fr_FR'
+when 'en_GB' then nvl(SINQTVER.LIB_EN,SINQTVER.LIB_FR)
+when 'fr_FR' then SINQTVER.LIB_FR
+when 'es_SP' then nvl(SINQTVER.LIB_ES,SINQTVER.LIB_FR)
+else SINQTVER.LIB_FR
+
+end,
+  Table__54.DT_FACT,
+  Table__54.DT_VD,
+  Table__54.DT_COMM_CLI_FIN_VD,
+  Table__54.DATIMM,
+  SINQTCMP.CODE,
+  case 'fr_FR'
+when 'en_GB' then nvl(SINQTCMP.LIB_EN,SINQTCMP.LIB_FR)
+when 'fr_FR' then SINQTCMP.LIB_FR
+when 'es_SP' then nvl(SINQTCMP.LIB_ES,SINQTCMP.LIB_FR)
+else SINQTCMP.LIB_FR
+
+end,
+  SINQTCND.CODE,
+  case 'fr_FR'
+when 'en_GB' then nvl(SINQTCND.LIB_EN,SINQTCND.LIB_FR)
+when 'fr_FR' then SINQTCND.LIB_FR
+when 'es_SP' then nvl(SINQTCND.LIB_ES,SINQTCND.LIB_FR)
+else SINQTCND.LIB_FR
+
+end,
+  SINQTCLI.CODE,
+  case 'fr_FR'
+when 'en_GB' then nvl(SINQTCLI.LIB_EN,SINQTCLI.LIB_FR)
+when 'fr_FR' then SINQTCLI.LIB_FR
+when 'es_SP' then nvl(SINQTCLI.LIB_ES,SINQTCLI.LIB_FR)
+else SINQTCLI.LIB_FR
+
+end,
+  SINQTSEG.CODE,
+  case 'fr_FR'
+when 'en_GB' then nvl(SINQTSEG.LIB_EN,SINQTSEG.LIB_FR)
+when 'fr_FR' then SINQTSEG.LIB_FR
+when 'es_SP' then nvl(SINQTSEG.LIB_ES,SINQTSEG.LIB_FR)
+else SINQTSEG.LIB_FR
+
+end,
+  case 'fr_FR'
+when 'en_GB' then nvl(SINQTZDS.LIB_EN,SINQTZDS.LIB_FR)
+when 'fr_FR' then SINQTZDS.LIB_FR
+when 'es_SP' then nvl(SINQTZDS.LIB_ES,SINQTZDS.LIB_FR)
+else SINQTZDS.LIB_FR
+
+end,
+  SINQTSFA.CODE,
+  case 'fr_FR'
+when 'en_GB' then nvl(SINQTSFA.LIB_EN,SINQTSFA.LIB_FR)
+when 'fr_FR' then SINQTSFA.LIB_FR
+when 'es_SP' then nvl(SINQTSFA.LIB_ES,SINQTSFA.LIB_FR)
+else SINQTSFA.LIB_FR
+
+end,
+  SINQTFAM.CODE,
+  case 'fr_FR'
+when 'en_GB' then nvl(SINQTFAM.LIB_EN,SINQTFAM.LIB_FR)
+when 'fr_FR' then SINQTFAM.LIB_FR
+when 'es_SP' then nvl(SINQTFAM.LIB_ES,SINQTFAM.LIB_FR)
+else SINQTFAM.LIB_FR
+
+end,
+  SINQTRUB.CODE,
+  case 'fr_FR'
+when 'en_GB' then SINQTRUB.LIB_EN
+when 'fr_FR' then SINQTRUB.LIB_FR
+when 'es_SP' then SINQTRUB.LIB_ES
+else SINQTRUB.LIB_FR
+
+end,
+  SINQTOPC.CODE,
+  case 'fr_FR'
+when 'en_GB' then SINQTOPC.LIB_EN
+when 'fr_FR' then SINQTOPC.LIB_FR
+when 'es_SP' then SINQTOPC.LIB_ES
+else SINQTOPC.LIB_FR
+
+end,
+  SINQTCMA.CODE,
+  case 'fr_FR'
+when 'en_GB' then nvl(SINQTCMA.LIB_EN,SINQTCMA.LIB_FR)
+when 'fr_FR' then SINQTCMA.LIB_FR
+when 'es_SP' then nvl(SINQTCMA.LIB_ES,SINQTCMA.LIB_FR)
+else SINQTCMA.LIB_FR
+
+end,
+  SINQTCMI.CODE,
+  case 'fr_FR'
+when 'en_GB' then nvl(SINQTCMI.LIB_EN,SINQTCMI.LIB_FR)
+when 'fr_FR' then SINQTCMI.LIB_FR
+when 'es_SP' then nvl(SINQTCMI.LIB_ES,SINQTCMI.LIB_FR)
+else SINQTCMI.LIB_FR
+
+end,
+  Table__54.TYPE_FLOTTE_VD,
+  Table__54.TYPE_OPE_ESSOR,
+  Table__54.TYP_UTIL_VD,
+  Table__54.CODE_PROFESSION_VD,
+  Table__54.CODE_PROMO,
+  Table__54.CODE_PROMO2,
+  SINQTMRQ_2.CODE
+
+ORDER BY Table__54.DT_VD

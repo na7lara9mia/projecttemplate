@@ -1,0 +1,22 @@
+HdfsFileRawPath: "hdfs:///user/brc03/vmeca/data/raw/"
+HdfsFileStandardPath: "hdfs:///user/brc03/vmecb/data/standard/promo/"
+HdfsFileRefinedPath: "hdfs:///user/brc03/vmecb/data/refined/smkt005_ref_promo/"
+
+ColumnToSelect:
+  - 'Brand'
+  - 'Opc'
+  - 'Category'
+  - 'COUNTRY'
+ColumnToRename:
+  old:
+  - 'Brand'
+  - 'Opc'
+  - 'Category'
+  new:
+    - 'BRAND'
+    - 'LIB_OPC'
+    - 'LIB_CAT'
+dfVINPROMO: "hdfs:///user/brc03/vmecb/data/refined/smkt007_vinpromo/"
+dfCLASS: "hdfs:///user/brc03/vmecb/data/standard/Classification_VME_Category/"
+
+PROMO_table: 'SMKT005_REF_PROMO_PKG'

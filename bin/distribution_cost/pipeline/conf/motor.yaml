@@ -1,0 +1,25 @@
+hdfsFileSourcePath: "hdfs:///user/brc06/data/standardized/"
+hdfsFileRawPath: "hdfs:///user/brc03/vmecb/data/raw/motor_source_copy/"
+hdfsFileStandardPath: "hdfs:///user/brc03/vmecb/data/standard/motor/"
+hdfsFileRefinedPath: "hdfs:///user/brc03/vmecb/data/refined/smkt004_ref_mot/"
+tables:
+  - bds00/rbvqttff
+  - bds00/rbvqtlm1
+
+tff: "rbvqttff/"
+lm1: "rbvqtlm1/"
+
+motorSQLPath: "../sql/motor.sql"
+motorSQLPathP: "../sql/motor_parametrized.sql"
+
+ColumnToRename:
+  old:
+    - 'libelle_francais'
+    - 'energia'
+    - 'cod_motor'
+  new:
+    - 'COUNTRY'
+    - 'ENERGY'
+    - 'COD_MOTOR'
+
+MOTOR_table: 'SMKT004_REF_MOT_PKG'
