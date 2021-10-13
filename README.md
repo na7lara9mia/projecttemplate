@@ -1,4 +1,4 @@
-# PSA Data Science Template
+# eBee project template
 
 This is a standard template for data science projects. Its purpose is to meet
 the needs of the data scientists and also the DDCE requirements. This example
@@ -91,12 +91,12 @@ based on this template, please execute the following steps.
 
 ### Application and package names
 
-- *Application name*: repository name on GitHub. Every PSA application follows the
+- *Application name*: repository name on GitHub. Every eBee application follows the
 same naming convention. It is composed of a trigram (`prd`) followed by two digits
 (usually `00` if it's the first version of the application). The `prd` should meet
 several requirements:
   - composed of exactly 3 alpha characters
-  - should not already exist: see this [link](http://reflex.inetpsa.com/PV4/Applications/Prd?area=Applications)
+  - should not already exist
   to verify that the prd is available
   - should be meaningful (e.g. *rep* for *reporting* is too general)
 
@@ -132,8 +132,7 @@ In your terminal, please run the following command.
 $ git clone <SSH url>
 ```
 NB: if you have problems cloning the project using SSH protocol, then your SSH key
-may not be properly configured. Please see the documentation at this [link](https://shiftup.sharepoint.com/sites/datascience/_layouts/15/WopiFrame.aspx?sourcedoc={76cd4b2b-c68d-4dc7-b029-910c4869324c}&action=edit&wd=target%28Technical%20Kit.one%7C4292f160-b6f8-4df4-8fa4-b076bffa6d8c%2F5.2.1.%20SSH%20connection%7C3396b4a5-79b8-4713-a702-1360b437e23d%2F%29)
-to configure it.
+may not be properly configured.
 
 Second, use the command `rename` defined in the Makefile. At the invitation,
 please enter the initial name of the package (by default `app_template`)
@@ -305,9 +304,9 @@ of equivalenty,
 ```
 $ pytest bin/test bin/app_template
 ```
-which allows [a finer grained control](http://doc.pytest.org/en/latest/usage.html#specifying-tests-selecting-tests) on which tests to run.
+which allows a finer grained control
 
-The [`pytest-spark`](https://pypi.org/project/pytest-spark/) package, included in the dependencies, exposes a global `spark_session` fixture that creates a PySpark session for unit tests.
+The [`pytest-spark`] package, included in the dependencies, exposes a global `spark_session` fixture that creates a PySpark session for unit tests.
 
 ### Reset the environment
 
@@ -357,7 +356,7 @@ system,
 | FIX              | bug fix                                            | fix             |
 | DEP              | deprecate something, or remove a deprecated object |                 |
 | DOC              | documentation                                      | doc             |
-| ENH              | enhancement                                        | feat           |
+| ENH              | enhancement                                        | feat            |
 | MAINT (or MNT)   | maintenance commit (refactoring, typos, etc.)      | refactor, minor |
 | REV              | revert an earlier commit                           |                 |
 | STY              | style fix (whitespace, PEP8)                       | style           |
