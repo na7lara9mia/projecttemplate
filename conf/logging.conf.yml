@@ -13,7 +13,7 @@ handlers:
   file_error:
     level: ERROR
     class: logging.handlers.TimedRotatingFileHandler
-    filename: log/distribution_cost-error.log
+    filename: log/projecttemplate-error.log
     when: 'D'
     interval: 1
     backupCount: 7
@@ -21,7 +21,7 @@ handlers:
   file_info:
     level: INFO
     class: logging.handlers.TimedRotatingFileHandler
-    filename: log/distribution_cost-info.log
+    filename: log/projecttemplate-info.log
     when: 'D'
     interval: 1
     backupCount: 7
@@ -29,7 +29,7 @@ handlers:
   file_debug:
     level: DEBUG
     class: logging.handlers.TimedRotatingFileHandler
-    filename: log/distribution_cost-debug.log
+    filename: log/projecttemplate-debug.log
     when: 'D'
     interval: 1
     backupCount: 7

@@ -10,7 +10,7 @@ echo "Loading app-profile.sh from this repository: $CONF"
 
 # This folder should contain the source code of the application
 # (this is the relative folder in the BIN)
-export PACKAGE_DIR="distribution_cost"
+export PACKAGE_DIR="projecttemplate"
 
 if [ ! -e $BIN/$PACKAGE_DIR ]
 then

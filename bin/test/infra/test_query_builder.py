@@ -1,7 +1,7 @@
 import unittest
 import datetime
 
-from distribution_cost.infra import query_builder
+from projecttemplate.infra import query_builder
 
 
 class TestQueryBuilder(unittest.TestCase):

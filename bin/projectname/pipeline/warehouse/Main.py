@@ -1,7 +1,7 @@
 # Imports
 from argparse import ArgumentParser
 from pyspark.sql.types import *
-from distribution_cost.configuration import spark_config
+from projecttemplate.configuration import spark_config
 from Madax import madax_construct
 from Samara import samara_construct
 from datetime import datetime

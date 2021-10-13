@@ -13,11 +13,11 @@ import logging
 import datetime
 from pyspark.sql import functions as F
 
-from distribution_cost.configuration import spark_config
-from distribution_cost.configuration.app import AppConfig
-from distribution_cost.configuration.data import DataConfig
+from projecttemplate.configuration import spark_config
+from projecttemplate.configuration.app import AppConfig
+from projecttemplate.configuration.data import DataConfig
 
-from distribution_cost.domain import kpis
+from projecttemplate.domain import kpis
 
 
 def run(filepath_prod_flow="/user/brc05/data/refined/manf001_vehc_prdc_flow/year=2020/month=01"):

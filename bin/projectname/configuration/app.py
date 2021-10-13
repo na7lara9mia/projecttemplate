@@ -5,7 +5,7 @@ import yaml
 
 from ..infra import db_connection
 
-app_name = 'distribution_cost'
+app_name = 'projecttemplate'
 REPO_PATH = os.path.abspath(os.path.join(
     os.path.dirname(__file__),
     '..',

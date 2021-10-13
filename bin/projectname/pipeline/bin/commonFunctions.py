@@ -5,7 +5,7 @@ import subprocess
 from datetime import datetime
 from pyspark.sql import functions as F
 from pyspark.sql.types import *
-from distribution_cost.configuration.app import AppConfig
+from projecttemplate.configuration.app import AppConfig
 
 # Log file creation with Run ID
 logging.basicConfig(filename='../log/pipeline_run_' + datetime.now().strftime("%Y%m%d%H%M%S") + '.log',

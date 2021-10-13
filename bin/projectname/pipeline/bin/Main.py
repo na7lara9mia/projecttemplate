@@ -2,7 +2,7 @@
 from datetime import datetime, timedelta
 from argparse import ArgumentParser
 from pyspark.sql.types import *
-from distribution_cost.configuration import spark_config
+from projecttemplate.configuration import spark_config
 from toRaw import to_raw
 from toStandard import to_standard
 from toRefined import to_refined

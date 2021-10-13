@@ -2,7 +2,7 @@ import logging
 import datetime
 import pandas as pd
 
-from distribution_cost.configuration import app, mails
+from projecttemplate.configuration import app, mails
 
 
 def send_mail(current_date=datetime.datetime.now()):
